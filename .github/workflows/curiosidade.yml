@@ -1,0 +1,23 @@
+name: Curiosidade Diária
+
+on:
+  workflow_dispatch:  # Permite rodar manualmente
+
+jobs:
+  curiosidade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependência (requests)
+        run: pip install requests
+
+      - name: Executar script Python
+        run: python curiosidade.py
