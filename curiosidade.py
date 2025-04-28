@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 
+
 hoje = datetime.now()
 mes = hoje.month
 dia = hoje.day
