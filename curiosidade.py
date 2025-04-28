@@ -2,10 +2,12 @@ import requests
 from datetime import datetime
 
 def main():
+    # Pega o dia e mês atual
     hoje = datetime.now()
     mes = hoje.month
     dia = hoje.day
 
+    # Monta a URL correta
     url = f"http://numbersapi.com/{mes}/{dia}/date"
 
     try:
